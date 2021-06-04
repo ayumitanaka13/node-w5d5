@@ -36,7 +36,7 @@ app.patch('/api/todo/:id', async (req, res) => {
     res.send(updatedTodo)
 })
 
-mongoose.connect(process.env.MONGODB_URL, {
+mongoose.connect(process.env.MONGODB_URL_TEST, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useFindAndModify: false

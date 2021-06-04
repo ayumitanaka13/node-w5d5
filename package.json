@@ -6,10 +6,10 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "yarn start --prefix client",
+    "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
-    "db:seed": "node util/db:seed.js",
-    "db:reset": "node util/db:reset.js",
+    "db:seed": "node utils/db:seed.js",
+    "db:reset": "node utils/db:reset.js",
     "test": "cypress open",
     "ci:dev": "start-server-and-test dev :3000 test"
   },
