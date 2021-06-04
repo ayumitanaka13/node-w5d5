@@ -1,0 +1,29 @@
+{
+  "name": "d3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "yarn start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ",
+    "db:seed": "node util/db:seed.js",
+    "db:reset": "node util/db:reset.js",
+    "test": "cypress open",
+    "ci:dev": "start-server-and-test dev :3000 test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "concurrently": "^6.2.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.12"
+  },
+  "devDependencies": {
+    "cypress": "^7.4.0",
+    "start-server-and-test": "^1.12.4"
+  }
+}
